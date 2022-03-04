@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Zombie
+    uniqueID: 2282257535
+    locked: 0
+  - name: Player
+    uniqueID: 1988913647
+    locked: 0
+  - name: Trees
+    uniqueID: 3170148683
     locked: 0
