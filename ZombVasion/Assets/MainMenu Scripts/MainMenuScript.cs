@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
 
-    public GameObject PlayButton;
-    public GameObject OptionsButton;
-    public GameObject QuitButton;
+    public GameObject BlackFadeScreenObj;
 
     public float DelayTime = 0f;
     public bool startTimer;
+
+    public Animator anim;
 
     private void Update()
     {
@@ -21,7 +21,7 @@ public class MainMenuScript : MonoBehaviour
             DelayTime += Time.deltaTime;
         }
 
-        if(DelayTime >= 2f)
+        if(DelayTime >= 3f)
         {
             SceneManager.LoadScene("GamePlayScene");
         }
@@ -29,7 +29,9 @@ public class MainMenuScript : MonoBehaviour
 
     public void PlayBTN()
     {
+        BlackFadeScreenObj.SetActive(true);
         startTimer = true;
+        anim.Play("BlackScreenAnim");
     }
 
     public void OptionsBTN()
@@ -39,7 +41,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void QuitBTN()
     {
-        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=4s");
+        Application.OpenURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         Application.Quit();
     }
 }
