@@ -11,9 +11,25 @@ public class MainMenuScript : MonoBehaviour
     public GameObject OptionsButton;
     public GameObject QuitButton;
 
+    public float DelayTime = 0f;
+    public bool startTimer;
+
+    private void Update()
+    {
+        if(startTimer == true)
+        {
+            DelayTime += Time.deltaTime;
+        }
+
+        if(DelayTime >= 2f)
+        {
+            SceneManager.LoadScene("GamePlayScene");
+        }
+    }
+
     public void PlayBTN()
     {
-        SceneManager.LoadScene("GamePlayScene");
+        startTimer = true;
     }
 
     public void OptionsBTN()
