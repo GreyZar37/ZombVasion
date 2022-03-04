@@ -51,3 +51,6 @@ TagManager:
   - name: Roof
     uniqueID: 3170148683
     locked: 0
+  - name: Quest
+    uniqueID: 541063839
+    locked: 0
