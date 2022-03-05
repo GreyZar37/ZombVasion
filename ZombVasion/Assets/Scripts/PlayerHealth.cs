@@ -8,8 +8,12 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public GameObject zombie;
 
-
     public bool playerIsDead = false;
+
+    public GameObject DeathScreen;
+    public Animator DeathScreenShowAnim;
+    public float DeathFadeDelay = 0f;
+    bool startFadeDelayTimer = false;
 
 
     // Start is called before the first frame update
@@ -28,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
+            startFadeDelayTimer = true;
             playerIsDead = true;
             Destroy();
         }
@@ -37,10 +42,19 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
+        if(startFadeDelayTimer == true)
+        {
+            DeathFadeDelay += Time.deltaTime;
+        }
+        if(DeathFadeDelay >= 2f)
+        {
+            print("Test");
+            startFadeDelayTimer = false;
+            PlayDeathScreenAnim();
+            DeathFadeDelay = 0f;
+        }
+
     }
-
-
-
 
 
     public void TakeDamage(int damage)
@@ -56,7 +70,12 @@ public class PlayerHealth : MonoBehaviour
     private void Destroy()
     {
         zombie.SetActive(true);
+    }
+
+    private void PlayDeathScreenAnim()
+    {
+        DeathScreen.SetActive(true);
+        DeathScreenShowAnim.Play("FadeIn");
         Destroy(gameObject);
-       
     }
 }
