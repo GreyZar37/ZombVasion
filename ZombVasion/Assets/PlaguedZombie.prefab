@@ -102,8 +102,8 @@ GameObject:
   - component: {fileID: 8641813058099849387}
   - component: {fileID: 8641813058099849391}
   m_Layer: 0
-  m_Name: Zombie 1
-  m_TagString: Enemy
+  m_Name: PlaguedZombie
+  m_TagString: PlaguedZombieLvl1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3545746, g: 0.5660378, b: 0.3850951, a: 1}
+  m_Color: {r: 0.6792453, g: 0.27831727, b: 0.24606618, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -429,7 +429,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.754717, g: 0.28026178, b: 0.1666073, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -595,7 +595,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.7264151, g: 0.28011557, b: 0.1123887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -678,7 +678,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.7264151, g: 0.28011557, b: 0.1123887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -761,7 +761,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.7264151, g: 0.28011557, b: 0.1123887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -844,7 +844,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.754717, g: 0.28026178, b: 0.1666073, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -927,7 +927,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.3529412, g: 0.5647059, b: 0.38431373, a: 1}
+  m_Color: {r: 0.7264151, g: 0.28011557, b: 0.1123887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1010,7 +1010,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4528302, g: 0.18540406, b: 0.18540406, a: 1}
+  m_Color: {r: 0.6037736, g: 0.0022783459, b: 0.0022783459, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1093,7 +1093,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4528302, g: 0.18540406, b: 0.18540406, a: 1}
+  m_Color: {r: 0.6037736, g: 0.0022783459, b: 0.0022783459, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

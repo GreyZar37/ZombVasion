@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - PlagueHeart
+  - PlaguedZombie
+  - Wall
+  - PlaguedZombieLvl1
+  - PlaguedZombieLvl2
   layers:
   - Default
   - TransparentFX
