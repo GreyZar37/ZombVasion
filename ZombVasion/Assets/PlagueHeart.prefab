@@ -271,9 +271,8 @@ GameObject:
   - component: {fileID: 3426285942008859340}
   - component: {fileID: 3426285942008859342}
   - component: {fileID: 3426285942008859343}
+  - component: {fileID: 3426285942008859336}
   - component: {fileID: 3426285942008859337}
-  - component: {fileID: 884038557}
-  - component: {fileID: 8869510058985450830}
   m_Layer: 0
   m_Name: PlagueHeart
   m_TagString: PlagueHeart
@@ -288,7 +287,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3426285942008859379}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.37, y: -27.16, z: 0}
   m_LocalScale: {x: 1.2965, y: 1.2965, z: 1.2965}
   m_Children:
@@ -314,7 +313,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6ad482fe6e8fb2f4a97b913cb2d032a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -439,6 +438,39 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 3
+--- !u!68 &3426285942008859336
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3426285942008859379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 2.6466775, y: 0.22198948}
+  - {x: 2.679738, y: 0.20438252}
+  - {x: 3.1284468, y: -0.034585506}
+  - {x: 3.140198, y: -1.919415}
+  - {x: 2.9880989, y: -2.278582}
+  - {x: 2.4796276, y: -2.5912857}
+  - {x: 0.96636367, y: -2.4992034}
+  - {x: 0.0009029462, y: -1.6052344}
+  - {x: -0.025267927, y: -1.4032232}
+  - {x: 0.09498992, y: -1.1155776}
+  - {x: 0.8379904, y: -0.16965784}
+  - {x: 1.3630991, y: 0.12857407}
+  - {x: 2.646014, y: 0.2215246}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &3426285942008859337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,62 +486,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   slider: {fileID: 3426285942853115373}
---- !u!114 &884038557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3426285942008859379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9cce59e2fbbf754bb4c64f060e116b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  zombiePrefab: {fileID: 8641813058099849386, guid: f5f77ffc37b01474ab51baead3a6fc05, type: 3}
-  spawnCooldown: 5
-  ZombieTag: 
-  currentZombiest: []
-  maxZombies: 2
---- !u!60 &8869510058985450830
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3426285942008859379}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.0179887, y: 0.009279139}
-      - {x: -0.053736426, y: -1.3209575}
-      - {x: -0.021512806, y: -1.8484849}
-      - {x: 1.1118925, y: -2.599587}
-      - {x: 2.6964765, y: -2.5995853}
-      - {x: 3.1182418, y: -2.0428948}
-      - {x: 3.155212, y: -0.38305432}
-      - {x: 2.5689313, y: 0.25448155}
 --- !u!1 &3426285942161539154
 GameObject:
   m_ObjectHideFlags: 0

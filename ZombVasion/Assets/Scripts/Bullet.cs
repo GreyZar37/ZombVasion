@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour
     {
        
 
-
-        if (other.tag == "Enemy" || other.tag == "PlaguedZombieLvl1" || other.tag == "PlaguedZombieLvl2")
+        if (other.tag == "Enemy")
 
         {
             other.gameObject.GetComponent<EnemyHealth>().TakeDamage(playerDamage);
@@ -23,14 +22,6 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<PlagueHeartHealth>().TakeDamage(playerDamage);
             Destroy(gameObject);
         }
-        else if (other.tag == "Wall")
-
-        {
-         
-            Destroy(gameObject);
-        }
-
-     
 
     }
 
