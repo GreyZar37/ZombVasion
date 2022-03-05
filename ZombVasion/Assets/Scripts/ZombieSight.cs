@@ -5,6 +5,11 @@ using UnityEngine;
 public class ZombieSight : MonoBehaviour
 {
     public bool playerIsSeen;
+    
+    private void Update()
+    {
+         
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -12,4 +17,5 @@ public class ZombieSight : MonoBehaviour
             playerIsSeen = true;
         }
     }
+
 }

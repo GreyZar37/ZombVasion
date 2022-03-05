@@ -5,22 +5,30 @@ using UnityEngine;
 public class ZombieAi : MonoBehaviour
 {
     public float speed;
-    public Transform target;
     private Rigidbody2D rb;
     private Vector2 movement;
 
     public float coolDown;
     float coolDownTimer;
 
+    
+
+    public Pathfinding.AIDestinationSetter pathfinding;
+
+    float timerSight;
+    public float maxTimerSight;
+
+    public Transform target;
+    public bool playerSeen;
     public float distence;
-
-    public ZombieSight zombieSight;
-
 
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
         rb = this.GetComponent<Rigidbody2D>();
+        timerSight = maxTimerSight;
     }
 
 
@@ -28,25 +36,30 @@ public class ZombieAi : MonoBehaviour
     {
      
         coolDownTimer -= Time.deltaTime;
-        /*
-        if(zombieSight.playerIsSeen == true)
+        timerSight -= Time.deltaTime;
+        
+       float dist = Vector3.Distance(target.position, transform.position);
+       if(dist <= 10)
         {
-            Vector2 direction = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
-            transform.up = direction;
+            playerSeen = true;
+        }
+     
 
-            if (Vector2.Distance(transform.position, target.position) > distence)
-            {
+        if (playerSeen == true)
+        {
+            pathfinding.enabled = true;
+        }
+        else
+        {
+            pathfinding.enabled = false;
 
-                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            }
+        }
 
-        }*/
-
-
-
-
-
-
+        if(timerSight <= 0)
+        {
+            playerSeen = false;
+            timerSight = maxTimerSight;
+        }
 
     }
     private void OnTriggerStay2D(Collider2D collision)

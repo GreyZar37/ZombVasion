@@ -6,11 +6,13 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
-    public ZombieSight zombieSight;
+
+    ZombieAi zombieAi;
 
     // Start is called before the first frame update
     void Start()
     {
+        zombieAi = GetComponent<ZombieAi>();
         currentHealth = maxHealth;
     }
 
@@ -33,7 +35,7 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        zombieSight.playerIsSeen = true;
+        zombieAi.playerSeen = true;
 
     }
 
