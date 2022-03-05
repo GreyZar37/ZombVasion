@@ -6,34 +6,22 @@ public class HouseScript : MonoBehaviour
 {
 
     public GameObject roof;
-    public GameObject heartLife;
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            if (heartLife != null)
-            {
-                heartLife.SetActive(true);
-
-            }
-            InsideAHouse.insideHouse = true;
             roof.SetActive(false);
-
+            InsideAHouse.insideHouse = true;
+        
         }
-
+       
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            roof.SetActive(true);
-            if(heartLife != null)
-            {
-                heartLife.SetActive(false);
-
-            }
+            roof.SetActive(true); ;
             InsideAHouse.insideHouse = false; 
 
         }

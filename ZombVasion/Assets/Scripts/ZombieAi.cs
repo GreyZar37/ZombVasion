@@ -38,28 +38,20 @@ public class ZombieAi : MonoBehaviour
         coolDownTimer -= Time.deltaTime;
         timerSight -= Time.deltaTime;
         
-        if(target != null)
+       float dist = Vector3.Distance(target.position, transform.position);
+       if(dist <= 10)
         {
-            float dist = Vector3.Distance(target.position, transform.position);
-            if (dist <= 10)
-            {
-                playerSeen = true;
-            }
+            playerSeen = true;
         }
-       
      
 
-        if (playerSeen == true && pathfinding != null)
+        if (playerSeen == true)
         {
             pathfinding.enabled = true;
         }
         else
         {
-            if(pathfinding != null)
-            {
-                pathfinding.enabled = false;
-
-            }
+            pathfinding.enabled = false;
 
         }
 

@@ -12,13 +12,12 @@ public class InsideAHouse : MonoBehaviour
 
     private void Update()
     {
-
         if (insideHouse == true)
         {
             sun.intensity = 0.1f;
             playerLight.enabled = true;
         }
-        if (insideHouse == false && playerLight != null)
+        if (insideHouse == false)
         {
             sun.intensity = 0.35f;
             playerLight.enabled = false;
