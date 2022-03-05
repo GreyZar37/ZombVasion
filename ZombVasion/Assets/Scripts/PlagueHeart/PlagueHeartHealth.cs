@@ -7,6 +7,7 @@ public class PlagueHeartHealth : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+   
 
     public Slider slider;
 
