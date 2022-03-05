@@ -8,10 +8,18 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+       
+
         if (other.tag == "Enemy")
 
         {
             other.gameObject.GetComponent<EnemyHealth>().TakeDamage(playerDamage);
+            Destroy(gameObject);
+        }
+        else if (other.tag == "PlagueHeart")
+
+        {
+            other.gameObject.GetComponent<PlagueHeartHealth>().TakeDamage(playerDamage);
             Destroy(gameObject);
         }
 

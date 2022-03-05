@@ -21,7 +21,6 @@ public class ZombieAi : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
 
@@ -29,7 +28,7 @@ public class ZombieAi : MonoBehaviour
     {
      
         coolDownTimer -= Time.deltaTime;
-
+        /*
         if(zombieSight.playerIsSeen == true)
         {
             Vector2 direction = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
@@ -41,7 +40,7 @@ public class ZombieAi : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             }
 
-        }
+        }*/
 
 
 
