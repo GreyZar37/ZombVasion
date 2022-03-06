@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject UI;
     public Slider levelSlider;
 
+    public bool gamePaused;
+
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI levelText;
 

@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
 
+  
+
+
+
     public static float playerSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
@@ -13,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 mousePos;
     void Start()
     {
+       
 
     }
 

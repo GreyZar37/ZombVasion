@@ -27,12 +27,14 @@ public class Shoot : MonoBehaviour
 
     public GameObject[] ammoImages;
 
-
+    public GameObject gameManager;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         currentTimerReload = playerCoolReload;
         ammoLeft = magazine;
+        gameManager = GameObject.Find("GameManager");
+
     }
 
 
@@ -55,7 +57,7 @@ public class Shoot : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Fire1") && currentTimer <= 0 && ammoLeft > 0)
+        if (Input.GetButtonDown("Fire1") && currentTimer <= 0 && ammoLeft > 0 && gameManager.GetComponent<GameManager>().gamePaused == false)
         {
             shoot();
             audioSource.PlayOneShot(gunShot);

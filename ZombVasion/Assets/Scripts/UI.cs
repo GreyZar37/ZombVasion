@@ -8,6 +8,7 @@ public class UI : MonoBehaviour
     //WEAPON SMITH
     public GameObject[] ShopMenus;
     public GameObject ShopMenu;
+    public GameManager gameManager;
 
     bool MenuActive = true;
 
@@ -24,6 +25,7 @@ public class UI : MonoBehaviour
     //WEAPON SMITH
     public void OnAmmoCategoryClick()
     {
+        gameManager.gamePaused = true;
         ShopMenus[0].SetActive(true);
 
         ShopMenus[1].SetActive(false);
@@ -33,6 +35,8 @@ public class UI : MonoBehaviour
 
     public void OnAttachCategoryClick()
     {
+        gameManager.gamePaused = true;
+
         ShopMenus[1].SetActive(true);
 
         ShopMenus[0].SetActive(false);
@@ -42,6 +46,8 @@ public class UI : MonoBehaviour
 
     public void OnWeaponsCategoryClick()
     {
+        gameManager.gamePaused = true;
+
         ShopMenus[2].SetActive(true);
 
         ShopMenus[0].SetActive(false);
@@ -51,6 +57,8 @@ public class UI : MonoBehaviour
 
     public void OnExtrasCategoryClick()
     {
+        gameManager.gamePaused = true;
+
         ShopMenus[3].SetActive(true);
 
         ShopMenus[0].SetActive(false);
@@ -60,6 +68,8 @@ public class UI : MonoBehaviour
 
     public void CloseMenu()
     {
+        gameManager.gamePaused = false;
+
         MenuActive = false;
         ShopMenu.SetActive(false);
     }
@@ -70,6 +80,8 @@ public class UI : MonoBehaviour
         {
             if(MenuActive == true)
             {
+                gameManager.gamePaused = false;
+
                 ShopMenu.SetActive(false);
                 MenuActive = false;
             }
