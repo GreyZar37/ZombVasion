@@ -41,7 +41,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void QuitBTN()
     {
-        Application.OpenURL("https://www.youtube.com/watch?v=-AXetJvTfU0");
         Application.Quit();
     }
 }

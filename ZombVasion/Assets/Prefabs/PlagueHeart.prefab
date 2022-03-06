@@ -453,7 +453,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  questID: 0
   slider: {fileID: 3426285942853115373}
+  quest: {fileID: 0}
 --- !u!114 &884038557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,9 +544,9 @@ RectTransform:
   m_Father: {fileID: 3426285941806394674}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000026703, y: 411}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -4, y: -96.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3426285942161539117
@@ -844,8 +846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0006713867, y: 0}
-  m_SizeDelta: {x: 0, y: -0.001953125}
+  m_AnchoredPosition: {x: 0.09539795, y: -0.047607422}
+  m_SizeDelta: {x: 0.19214, y: -0.097229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3426285942477166905
 CanvasRenderer:
@@ -1001,10 +1003,10 @@ RectTransform:
   m_Father: {fileID: 3426285941806394674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 464}
-  m_SizeDelta: {x: -847.6, y: -1051.2632}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -38}
+  m_SizeDelta: {x: 1072.4, y: 17.655579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3426285942853115373
 MonoBehaviour:
