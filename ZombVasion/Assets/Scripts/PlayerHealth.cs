@@ -8,14 +8,19 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     public int currentHealth;
     public Slider slider;
-    
+
+    public GameObject gameManager;
+
 
     public bool playerIsDead = false;
+    public AudioClip hurt;
 
   
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+
         currentHealth = maxHealth;
         
     }
@@ -45,6 +50,8 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        gameManager.GetComponent<GameManager>().audioSource.PlayOneShot(hurt);
+
     }
 
     public void Healing(int healing)

@@ -7,14 +7,17 @@ public class PlagueHeartHealth : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+
+    public int questID;
    
 
     public Slider slider;
+    public QuestScript quest;
 
     // Start is called before the first frame update
     void Start()
     {
- 
+        quest = FindObjectOfType<QuestScript>();
         currentHealth = maxHealth;
     }
 
@@ -45,6 +48,7 @@ public class PlagueHeartHealth : MonoBehaviour
 
     private void Destroy()
     {
+        quest.questComplete(questID);
         Destroy(gameObject);
     }
 }

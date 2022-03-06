@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         if(currentXp >= xpNedded)
         {
             level += 1;
-            currentXp = 0;
+            currentXp -= xpNedded;
             xpNedded *= 1.25f;
         }
 
