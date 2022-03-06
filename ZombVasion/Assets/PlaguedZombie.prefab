@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   coolDown: 1
+  damage: 20
   pathfinding: {fileID: 8641813058099849387}
   maxTimerSight: 10
   target: {fileID: 0}
@@ -251,6 +252,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   currentHealth: 0
+  coinsToGive: 1
+  xpToGive: 2
+  gameManager: {fileID: 0}
 --- !u!114 &8641813058099849360
 MonoBehaviour:
   m_ObjectHideFlags: 0

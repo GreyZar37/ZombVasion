@@ -11,6 +11,7 @@ public class ZombieAi : MonoBehaviour
     public float coolDown;
     float coolDownTimer;
 
+    public int damage;
     
 
     public Pathfinding.AIDestinationSetter pathfinding;
@@ -75,7 +76,7 @@ public class ZombieAi : MonoBehaviour
         if (coolDownTimer <= 0 && collision.gameObject.tag == "Player")
         {
 
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
             coolDownTimer = coolDown;
         }
     }

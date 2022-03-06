@@ -13,7 +13,7 @@ public class UI : MonoBehaviour
 
     public void TryAgain()
     {
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadScene("GamePlayScene 1");
     }
 
     public void MainMenu()

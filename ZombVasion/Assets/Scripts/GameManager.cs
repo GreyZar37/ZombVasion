@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,8 +13,19 @@ public class GameManager : MonoBehaviour
     public GameObject zombie;
     public GameObject player;
     public GameObject UI;
+    public Slider levelSlider;
+
+    public TextMeshProUGUI coinText;
+    public TextMeshProUGUI levelText;
+
+    public float coins;
+
+    public float xpNedded;
+    public float currentXp;
+    public int level;
 
     public PlayerHealth playerHealth;
+    public AudioSource audioSource;
 
 
     void Start()
@@ -23,7 +36,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player != null)
+
+        coinText.text = coins.ToString();
+
+
+        levelMethod();
+
+        if (player != null)
         {
             zombie.transform.position = player.transform.position;
         }
@@ -57,5 +76,29 @@ public class GameManager : MonoBehaviour
  
     }
 
+    public void receiveCoins(float coinsToGet)
+    {
+        coins += coinsToGet;
+    }
 
+    public void receiveXp(float xpToGet)
+    {
+        currentXp += xpToGet;
+    }
+
+    void levelMethod()
+    {
+        levelText.text = "Level: " + level.ToString();
+
+        levelSlider.value = currentXp;
+        levelSlider.maxValue = xpNedded;
+
+        if(currentXp >= xpNedded)
+        {
+            level += 1;
+            currentXp = 0;
+            xpNedded *= 1.25f;
+        }
+
+    }
 }

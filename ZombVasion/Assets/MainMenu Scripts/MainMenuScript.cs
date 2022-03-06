@@ -23,7 +23,7 @@ public class MainMenuScript : MonoBehaviour
 
         if(DelayTime >= 3f)
         {
-            SceneManager.LoadScene("GamePlayScene");
+            SceneManager.LoadScene("GamePlayScene 1");
         }
     }
 
