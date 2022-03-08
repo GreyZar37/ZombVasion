@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    //FADE IN
+    public GameObject FadeInCanvas;
+    float FadeTimer = 0f;
+
     //WEAPON SMITH
     public GameObject[] ShopMenus;
     public GameObject ShopMenu;
@@ -76,6 +80,13 @@ public class UI : MonoBehaviour
 
     private void Update()
     {
+        FadeTimer += Time.deltaTime;
+
+        if(FadeTimer >= 2.0f)
+        {
+            FadeInCanvas.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             if(MenuActive == true)
