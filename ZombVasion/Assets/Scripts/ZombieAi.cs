@@ -79,14 +79,16 @@ public class ZombieAi : MonoBehaviour
 
     public void vision()
     {
-        
-        RaycastHit2D hitInfo = Physics2D.Raycast(sight.position,new Vector2(target.position.x, target.position.y), sightDistance);
-        print(hitInfo.point);
-        Debug.DrawLine(sight.position, hitInfo.point, Color.red);
-        if (hitInfo.collider != null)
+
+        RaycastHit2D hit = Physics2D.Raycast(sight.position, Vector2.up, sightDistance);
+
+
+        Debug.DrawRay(sight.position, Vector2.up, Color.red, 2f);
+
+        if (hit.collider != null)
         {
            
-            if (hitInfo.collider.tag == "Player")
+            if (hit.transform.tag == "Player")
             {
 
                 print("Was Seen");
