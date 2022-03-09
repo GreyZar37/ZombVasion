@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
        
 
 
-        if (other.tag == "Enemy" || other.tag == "PlaguedZombieLvl1" || other.tag == "PlaguedZombieLvl2")
+        if (other.tag == "PlaguedZombie" || other.tag == "Zombie")
 
         {
             other.gameObject.GetComponent<EnemyHealth>().TakeDamage(playerDamage);

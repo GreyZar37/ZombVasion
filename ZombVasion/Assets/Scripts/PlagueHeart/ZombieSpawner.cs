@@ -14,8 +14,8 @@ public class ZombieSpawner : MonoBehaviour
     int randomSpawnPoint;
 
 
-    public string ZombieTag;
-    public GameObject[] currentZombiest;
+    public List<GameObject> currentZombies = new List<GameObject>();
+
     public int maxZombies;
     bool canSpawn;
 
@@ -32,9 +32,14 @@ public class ZombieSpawner : MonoBehaviour
         currentTimer -= Time.deltaTime;
         randomSpawnPoint = Random.Range(0, spawnPoints.Length);
 
-        currentZombiest = GameObject.FindGameObjectsWithTag(ZombieTag);
+        for (int i = 0; i < currentZombies.Count; i++)
+        {
+            if (currentZombies[i] == null)
+                currentZombies.RemoveAt(i);
+        }
 
-        if(currentZombiest.Length > maxZombies)
+
+        if (currentZombies.Count > maxZombies)
         {
             canSpawn = false;
         }
@@ -45,7 +50,7 @@ public class ZombieSpawner : MonoBehaviour
 
         if (currentTimer <= 0 && canSpawn == true)
         {
-            Instantiate(zombiePrefab, new Vector2 (spawnPoints[randomSpawnPoint].transform.position.x, spawnPoints[randomSpawnPoint].transform.position.y),Quaternion.identity);
+            currentZombies.Add(Instantiate(zombiePrefab, new Vector2 (spawnPoints[randomSpawnPoint].transform.position.x, spawnPoints[randomSpawnPoint].transform.position.y),Quaternion.identity));
             currentTimer = spawnCooldown;
         }
 

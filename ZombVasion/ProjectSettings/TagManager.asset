@@ -8,8 +8,7 @@ TagManager:
   - PlagueHeart
   - PlaguedZombie
   - Wall
-  - PlaguedZombieLvl1
-  - PlaguedZombieLvl2
+  - Zombie
   layers:
   - Default
   - TransparentFX

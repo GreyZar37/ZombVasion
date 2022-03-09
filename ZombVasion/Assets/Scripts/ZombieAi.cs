@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ZombieAi : MonoBehaviour
 {
-    public float speed;
+    /// <Basic Ai mechanics>
     private Rigidbody2D rb;
-    private Vector2 movement;
 
     public float coolDown;
     float coolDownTimer;
@@ -16,12 +15,17 @@ public class ZombieAi : MonoBehaviour
 
     public Pathfinding.AIDestinationSetter pathfinding;
 
-    float timerSight;
-    public float maxTimerSight;
 
     public Transform target;
+
+    /// <Ai Sight>
     public bool playerSeen;
-    public float distence;
+    public float sightDistance;
+
+    float timerSight;
+    public float maxTimerSight;
+    public Transform sight;
+
 
 
     void Start()
@@ -35,19 +39,11 @@ public class ZombieAi : MonoBehaviour
 
     void Update()
     {
-     
+        vision();
+
+
         coolDownTimer -= Time.deltaTime;
-        timerSight -= Time.deltaTime;
-        
-        if(target != null)
-        {
-            float dist = Vector3.Distance(target.position, transform.position);
-            if (dist <= 10)
-            {
-                playerSeen = true;
-            }
-        }
-       
+        timerSight -= Time.deltaTime;      
      
 
         if (playerSeen == true && pathfinding != null)
@@ -80,5 +76,26 @@ public class ZombieAi : MonoBehaviour
             coolDownTimer = coolDown;
         }
     }
- 
+
+    public void vision()
+    {
+        
+        RaycastHit2D hitInfo = Physics2D.Raycast(sight.position,new Vector2(target.position.x, target.position.y), sightDistance);
+        print(hitInfo.point);
+        Debug.DrawLine(sight.position, hitInfo.point, Color.red);
+        if (hitInfo.collider != null)
+        {
+           
+            if (hitInfo.collider.tag == "Player")
+            {
+
+                print("Was Seen");
+            }
+
+
+        }
+
+
+        }
+
 }
