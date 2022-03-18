@@ -79,6 +79,20 @@ public class ZombieAi : MonoBehaviour
         float delay = 0.2f;
         WaitForSeconds wait = new WaitForSeconds(delay);
 
+        RaycastHit2D hit = Physics2D.Raycast(sight.position, Vector2.up, sightDistance);
+
+
+        Debug.DrawRay(sight.position, Vector2.up, Color.red, 2f);
+
+        if (hit.collider != null)
+        {
+           
+            if (hit.transform.tag == "Player")
+            {
+
+                print("Was Seen");
+            }
+
         while (true)
         {
             yield return wait;
