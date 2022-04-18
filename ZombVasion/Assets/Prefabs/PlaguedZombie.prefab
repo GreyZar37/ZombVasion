@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2039722141
+--- !u!1 &629621356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2039722142}
+  - component: {fileID: 629621357}
   m_Layer: 0
-  m_Name: Sight
+  m_Name: FovPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2039722142
+--- !u!4 &629621357
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039722141}
+  m_GameObject: {fileID: 629621356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.361, z: 0}
+  m_LocalPosition: {x: 0, y: 0.501, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8641813058099849389}
@@ -130,8 +130,9 @@ GameObject:
   - component: {fileID: 8641813058099849360}
   - component: {fileID: 8641813058099849388}
   - component: {fileID: 8641813058099849387}
+  - component: {fileID: 1406041328}
   - component: {fileID: 8641813058099849391}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlaguedZombie
   m_TagString: PlaguedZombie
   m_Icon: {fileID: 0}
@@ -161,7 +162,7 @@ Transform:
   - {fileID: 8641813058815153598}
   - {fileID: 8641813058475727205}
   - {fileID: 8641813057753100681}
-  - {fileID: 2039722142}
+  - {fileID: 629621357}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -232,11 +233,7 @@ MonoBehaviour:
   coolDown: 1
   damage: 20
   pathfinding: {fileID: 8641813058099849387}
-  target: {fileID: 0}
   playerSeen: 0
-  sightDistance: 5
-  maxTimerSight: 10
-  sight: {fileID: 2039722142}
 --- !u!58 &6884697607616420155
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -370,6 +367,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &1406041328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641813058099849386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c56bd56906b1e4f938fa77264515b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fovAngle: 170
+  fovPoint: {fileID: 629621357}
+  sightRange: 10
+  closeSightRange: 3
+  target: {fileID: 0}
+  zombieAiScript: {fileID: 8641813058099849385}
 --- !u!50 &8641813058099849391
 Rigidbody2D:
   serializedVersion: 4

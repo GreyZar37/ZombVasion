@@ -18,8 +18,8 @@ TagManager:
   - UI
   - Walls
   - SafeZone
-  - 
-  - 
+  - TargetMask
+  - Obstacle
   - 
   - 
   - 
